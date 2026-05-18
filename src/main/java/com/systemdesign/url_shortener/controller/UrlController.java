@@ -33,4 +33,11 @@ public class UrlController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    //GET `/api/analytics/{shortCode}`
+    @GetMapping("/analytics/{shortCode}")
+    public ResponseEntity<String> getUrlStats(String shortCode) {
+        urlService.getUrlStats(shortCode);
+        return ResponseEntity.ok("URL statistics for " + shortCode);
+    }
 }

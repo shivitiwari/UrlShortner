@@ -1,10 +1,10 @@
-package com.systemdesign.url_shortener.DAO;
+package com.systemdesign.url_shortener.dao;
 
-import com.systemdesign.url_shortener.DTO.Url;
+import com.systemdesign.url_shortener.entity.Url;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UrlDAO extends JpaRepository<Url, Long> {
+public interface UrlDao extends JpaRepository<Url, Long> {
 
 }
