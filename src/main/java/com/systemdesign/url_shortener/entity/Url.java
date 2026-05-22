@@ -8,7 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
+import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDate;
 
@@ -18,6 +19,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "url")
 public class Url {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
